@@ -97,6 +97,8 @@ nav ul li.btn div {
 
 /* main */
 
+/*** main panel-principal ***/
+
 main .panel-principal {
   display: flex;
   justify-content: center;
@@ -189,6 +191,41 @@ main .panel-principal .row-icons img:hover {
   filter: grayscale(10%);
 }
 
+/*** main panel-sobre ***/
+
+main .panel-sobre {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .panel-sobre .box-sobre {
+  width: 70%;
+  height: auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.055);
+  /* border-right: 1px solid rgba(0, 0, 0, 0.055); */
+  border-width: 2px;
+}
+
+main .panel-sobre .box-sobre .title-sobre {
+  font-size: 1.6rem;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+main .panel-sobre .box-sobre .texto-sobre {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+main .panel-sobre .box-sobre .texto-sobre p {
+  margin-top: 4%;
+}
+
 @media all and (max-width: 900px) {
   /* nav */
   nav {
@@ -223,7 +260,7 @@ main .panel-principal .row-icons img:hover {
     font-size: 1.2rem;
   }
 
-  /* main */
+  /* main panel-principal */
 
   main .title {
     font-size: 1.5rem;
@@ -241,6 +278,15 @@ main .panel-principal .row-icons img:hover {
   main .panel-principal .row-icons ul li a img {
     width: 25px;
     height: 25px;
+  }
+
+  /* main panel-sobre */
+  main .panel-sobre .box-sobre {
+    width: 100%;
+  }
+
+  main .panel-sobre .box-sobre .texto-sobre p {
+    margin-top: 6%;
   }
 }
 
