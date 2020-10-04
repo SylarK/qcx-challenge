@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet"> <!-- Fonte-externa : Open Sans Condensed -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonte-externa : Open Sans Condensed -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
-    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-            <nav>
-                <ul>
-                    <li id="logo">
-                        <a href="#">Lucas Amado</a>
-                    </li>
-                    <li class="opcoes">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="opcoes">
-                        <a href="#">Sobre</a>
-                    </li>
-                    <li class="opcoes">
-                        <a href="#">Desafio</a>
-                    </li>
-                    <li class="btn">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </li>
-                </ul>
-            </nav>
+      <nav>
+        <ul>
+          <li id="logo">
+            <a href="#">Lucas Amado</a>
+          </li>
+          <li class="opcoes">
+            <a href="#">Home</a>
+          </li>
+          <li class="opcoes">
+            <a href="#">Sobre</a>
+          </li>
+          <li class="opcoes">
+            <a href="#">Desafio</a>
+          </li>
+          <li class="btn">
+            <div></div>
+            <div></div>
+            <div></div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div id="bg-principal" class="panel-principal marker-red">
-            <div class="title">
-                Desenvolvedor Front End
-            </div>
-            <div class="sub-title">
-                Desafio Qconcursos.com
-            </div>
-        </div><!-- end bg-principal-->
+      <div id="bg-principal" class="panel-principal marker-red">
+        <div class="overlay"></div>
+        <div class="title">Desenvolvedor Front End</div>
+        <div class="sub-title">Desafio Qconcursos.com</div>
+
+        <div class="row-icons">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img/instagram-brands.svg" alt="Logo Instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/linkedin-brands.svg" alt="Logo Linkedin" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/github-brands.svg" alt="Logo Github" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end bg-principal-->
     </main>
     <footer></footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
