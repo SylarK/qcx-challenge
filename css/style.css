@@ -226,6 +226,173 @@ main .panel-sobre .box-sobre .texto-sobre p {
   margin-top: 4%;
 }
 
+/*** main panel-desafio ***/
+
+main .panel-desafio {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(to top, #212529, #252934);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .panel-desafio .box-desafio {
+  height: 80%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .panel-desafio .box-desafio .title-desafio {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+main .panel-desafio .box-desafio .box-github {
+  width: 80%;
+  height: auto;
+  margin-top: 1%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-width: 1px solid black;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .panel-desafio .box-desafio .box-github .box-repo {
+  width: 100%;
+  height: 30vh;
+  overflow-x: auto;
+  /*display: none;*/
+}
+
+/*** main .panel-desafio .box-data ***/
+
+.box-desafio .box-github .box-data {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-desafio .box-github .box-data .profile {
+  height: 100%;
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-data .profile .img-profile {
+  width: 130px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.box-data .profile .img-profile img {
+  border-radius: 50%;
+}
+
+.box-data .profile a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #212529;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.box-desafio .box-github .box-data .info {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.box-data .info .output {
+  height: 50%;
+  width: 100%;
+  padding-left: 5%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-data .info .output p {
+  margin-top: 2%;
+  font-weight: bold;
+  color: #212529;
+}
+
+.box-data .info .buttons {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.box-data .info .buttons a {
+  padding: 5px;
+  width: 130px;
+  text-align: center;
+  border: 1px solid #212529;
+  text-decoration: none;
+  font-weight: bold;
+  color: #212529;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 0.9rem;
+}
+
+/*** main panel-desafio tabela ***/
+
+table#table-data {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table#table-data thead tr {
+  background-color: #58636d;
+  color: #ffffff;
+  text-align: left;
+}
+
+table#table-data th,
+td {
+  padding: 12px 15px;
+}
+
+table#table-data tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table#table-data tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* media queries */
+
 @media all and (max-width: 900px) {
   /* nav */
   nav {
@@ -264,6 +431,7 @@ main .panel-sobre .box-sobre .texto-sobre p {
 
   main .title {
     font-size: 1.5rem;
+    margin-top: 5%;
   }
 
   main .sub-title {
@@ -287,6 +455,57 @@ main .panel-sobre .box-sobre .texto-sobre p {
 
   main .panel-sobre .box-sobre .texto-sobre p {
     margin-top: 6%;
+  }
+
+  /*** main .panel-desafio ***/
+
+  .box-desafio .box-github .box-data {
+    height: 40vh;
+  }
+
+  main .panel-desafio .box-desafio {
+    width: 100%;
+  }
+
+  .box-desafio .box-github .box-data {
+    flex-direction: column;
+  }
+
+  .box-desafio .box-github .box-data .profile {
+    height: auto;
+  }
+
+  .box-data .profile .img-profile {
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 10%;
+  }
+
+  .box-desafio .box-github .box-data .info {
+    flex-direction: row;
+  }
+
+  .box-data .info .output {
+    padding: 5px;
+    position: relative;
+    min-width: max-content;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .box-data .info .buttons {
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .box-data .info .buttons a {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 120px;
+    margin-right: 0px;
+    margin-left: 10px;
   }
 }
 
