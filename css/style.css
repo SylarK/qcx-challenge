@@ -303,7 +303,9 @@ main .panel-desafio .box-desafio .box-github .box-repo {
 }
 
 .box-data .profile .img-profile img {
+  width: 130px;
   border-radius: 50%;
+  border: 0.5px solid #2126291a;
 }
 
 .box-data .profile a {
@@ -479,6 +481,10 @@ table#table-data tbody tr:nth-child(even) {
     width: 100px;
     border-radius: 50%;
     margin-top: 10%;
+  }
+
+  .box-data .profile .img-profile img {
+    width: 100px;
   }
 
   .box-desafio .box-github .box-data .info {
