@@ -34,7 +34,7 @@ main .overlay {
   position: absolute;
 }
 
-/* header */
+/*** header ****/
 
 header {
   position: absolute;
@@ -95,9 +95,9 @@ nav ul li.btn div {
   margin: 5px;
 }
 
-/* main */
+/*** main ***/
 
-/*** main panel-principal ***/
+/****** main panel-principal ******/
 
 main .panel-principal {
   display: flex;
@@ -208,7 +208,7 @@ main .panel-principal .row-icons img:hover {
   filter: grayscale(10%);
 }
 
-/*** main panel-sobre ***/
+/****** main panel-sobre ******/
 
 main .panel-sobre {
   height: 100vh;
@@ -241,9 +241,11 @@ main .panel-sobre .box-sobre .texto-sobre {
 
 main .panel-sobre .box-sobre .texto-sobre p {
   margin-top: 4%;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
-/*** main panel-desafio ***/
+/****** main panel-desafio ******/
 
 main .panel-desafio {
   width: 100%;
@@ -298,7 +300,7 @@ main .panel-desafio .box-desafio .box-github .box-repo {
   padding: 10px;
 }
 
-/*** main .panel-desafio .box-data ***/
+/****** main .panel-desafio .box-data ******/
 
 .box-desafio .box-github .box-data {
   width: 100%;
@@ -389,7 +391,7 @@ main .panel-desafio .box-desafio .box-github .box-repo {
   border-radius: 5px;
 }
 
-/*** main panel-desafio tabela ***/
+/****** main panel-desafio tabela ******/
 
 table#table-data {
   border-collapse: collapse;
@@ -425,7 +427,7 @@ table#table-data tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* Footer */
+/*** Footer ***/
 
 footer {
   background-color: rgb(83, 89, 102);
@@ -451,7 +453,7 @@ footer p a span img {
   height: auto;
 }
 
-/* Barra de Scroll */
+/*** Barra de Scroll ***/
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -474,7 +476,7 @@ footer p a span img {
   background-color: rgb(202, 133, 54);
 }
 
-/* media queries */
+/*** media queries ***/
 
 @media all and (max-width: 900px) {
   /* nav */
@@ -532,12 +534,18 @@ footer p a span img {
   }
 
   /* main panel-sobre */
+  main .panel-sobre {
+    height: auto;
+    margin-bottom: 30px;
+  }
+
   main .panel-sobre .box-sobre {
     width: 100%;
   }
 
   main .panel-sobre .box-sobre .texto-sobre p {
     margin-top: 6%;
+    text-align: justify;
   }
 
   /*** main .panel-desafio ***/
@@ -595,14 +603,3 @@ footer p a span img {
     margin-left: 10px;
   }
 }
-
-/*nav ul li.opcoes:after{
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 5px;
-    height: 2px;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.4s;
-}*/

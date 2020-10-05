@@ -15,5 +15,5 @@ To do
 [x] Separação das funções
 [x] Realizar renderizações
 [-] Box Shadown boxDesafio // Sem necessidade
-[] Conteúdo - Sobre
-[] Utilizar window.location ao clicar nas opções acima
+[z] Conteúdo - Sobre
+[x] Utilizar offsetTop ao clicar nas opções acima

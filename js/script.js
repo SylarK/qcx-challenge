@@ -1,21 +1,30 @@
+/****** Choose the repo ******/
+let user = 'SylarK';
+
+/****** Nav ******/
 const burguer = document.querySelector('.btn');
 const opcoes = document.querySelectorAll('.opcoes');
 
+/****** Output ******/
 const outRepositorios = document.querySelector('#repositorios');
 const outSeguidores = document.querySelector('#seguidores');
 const outSeguindo = document.querySelector('#seguindo');
 const link = document.querySelector('#ref-link');
 const imgProfile = document.querySelector('#imagem');
 
+/****** Table ******/
 const tableData = document.querySelector('#table-data');
 const boxRepositorio = document.querySelector('.box-repo');
 
 const btnRepositorio = document.querySelector('#btnRepositorio');
 const btnFavorito = document.querySelector('#btnFavorito');
 
+/****** Variables ******/
 let dataRepo = [];
 let dataFavo = [];
 let variavel = null;
+
+/****** Code ******/
 
 window.addEventListener('load', () => {
   listenBurguer();
@@ -55,7 +64,7 @@ function printData(data) {
 
 async function doFetchDataGit() {
   try {
-    const res = await fetch('https://api.github.com/users/SylarK');
+    const res = await fetch('https://api.github.com/users/'+user);
     const json = await res.json();
     printData(json);
     /* console.log(json); */
@@ -67,7 +76,7 @@ async function doFetchDataGit() {
 
 async function doFetchDataRepo() {
   try {
-    const res = await fetch('https://api.github.com/users/SylarK/repos');
+    const res = await fetch('https://api.github.com/users/'+ user +'/repos');
     const json = await res.json();
     variavel = json;
     dataRepo = json.map((data) => {
@@ -88,7 +97,7 @@ async function doFetchDataRepo() {
 
 async function doFetchDataFavo() {
   try {
-    const res = await fetch('https://api.github.com/users/SylarK/starred');
+    const res = await fetch('https://api.github.com/users/'+ user +'/starred');
     const json = await res.json();
     variavel = json;
     dataFavo = json.map((data) => {
