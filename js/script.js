@@ -7,16 +7,22 @@ const outSeguindo = document.querySelector('#seguindo');
 const link = document.querySelector('#ref-link');
 const imgProfile = document.querySelector('#imagem');
 
+const tableData = document.querySelector('#table-data');
+const boxRepositorio = document.querySelector('.box-repo');
+
 const btnRepositorio = document.querySelector('#btnRepositorio');
 const btnFavorito = document.querySelector('#btnFavorito');
 
-const dataRepo = [];
+let dataRepo = [];
+let dataFavo = [];
 let variavel = null;
 
 window.addEventListener('load', () => {
   listenBurguer();
+  listenButtons();
   doFetchDataGit();
   doFetchDataRepo();
+  doFetchDataFavo();
 });
 
 function listenBurguer() {
@@ -25,6 +31,17 @@ function listenBurguer() {
       opcao.classList.toggle('mostrar');
       //console.log(opcao);
     });
+  });
+}
+
+function listenButtons() {
+  btnRepositorio.addEventListener('click', () => {
+    console.log('Click Repositório');
+    renderTable(dataRepo, boxRepositorio);
+  });
+  btnFavorito.addEventListener('click', () => {
+    console.log('Click Favorito');
+    renderTable(dataFavo, boxRepositorio);
   });
 }
 
@@ -66,7 +83,55 @@ async function doFetchDataRepo() {
     });
     /* console.log(json); */
   } catch (err) {
-    console.log('Lucas, houve um erro na requisição ao Github/Repos.');
+    console.log('Lucas, houve um erro na requisição ao Github/repos.');
     console.log(`Log -> ${err}`);
   }
+}
+
+async function doFetchDataFavo() {
+  try {
+    const res = await fetch('https://api.github.com/users/SylarK/starred');
+    const json = await res.json();
+    variavel = json;
+    dataFavo = json.map((data) => {
+      const { id, name, html_url } = data;
+
+      return {
+        id,
+        name,
+        html_url,
+      };
+    });
+    /* console.log(json); */
+  } catch (err) {
+    console.log('Lucas, houve um erro na requisição ao Github/starred.');
+    console.log(`Log -> ${err}`);
+  }
+}
+
+function renderTable(repositorio, box) {
+  let dataHTML = `
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  `;
+
+  repositorio.forEach((data) => {
+    const { id, name, html_url } = data;
+
+    const saveData = `
+    <tr>
+      <td id="${id}"><a href="${html_url}">${name}</a></td>
+    </tr>
+    `;
+
+    dataHTML += saveData;
+  });
+
+  dataHTML += '</tbody>';
+  tableData.innerHTML = dataHTML;
+  boxRepositorio.style.display = 'block';
 }
