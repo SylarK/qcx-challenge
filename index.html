@@ -21,14 +21,14 @@
           <li id="logo">
             <a href="#">Lucas Amado</a>
           </li>
-          <li class="opcoes">
-            <a href="#">Home</a>
+          <li class="opcoes" id="home">
+            <a href="#home">Home</a>
           </li>
           <li class="opcoes">
-            <a href="#">Sobre</a>
+            <a href="#sobre">Sobre</a>
           </li>
           <li class="opcoes">
-            <a href="#">Desafio</a>
+            <a href="#desafio">Desafio</a>
           </li>
           <li class="btn">
             <div></div>
@@ -43,7 +43,16 @@
       <div id="bg-principal" class="panel-principal">
         <div class="overlay"></div>
         <div class="title">Desenvolvedor Front End</div>
-        <div class="sub-title">Desafio Qconcursos.com</div>
+        <!--<div class="sub-title">Desafio Qconcursos.com</div>-->
+        <div class="sub-title">
+          Desafio
+          <span>
+            <a href="https://www.qconcursos.com/">
+              <img id="logo-qc" src="img/logo-qc.svg" alt="Logo Qc" />
+              Qconcursos.com
+            </a>
+          </span>
+        </div>
 
         <div class="row-icons">
           <ul>
@@ -66,7 +75,7 @@
         </div>
       </div>
       <!-- end bg-principal-->
-      <div class="panel-sobre">
+      <div class="panel-sobre" id="sobre">
         <div class="box-sobre">
           <div class="title-sobre">Sobre</div>
           <div class="texto-sobre">
@@ -96,7 +105,7 @@
       </div>
       <!-- end panel-sobre -->
 
-      <div class="panel-desafio">
+      <div class="panel-desafio" id="desafio">
         <div class="box-desafio">
           <div class="title-desafio">Desafio</div>
           <div class="box-github">
@@ -133,8 +142,21 @@
       <!-- end panel-desafio -->
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>
+        Desafio Desenvolvedor Front
+        <a href="https://qconcursos.com">
+          <span>
+            <img src="img/logo-qc.svg" alt="Logo qc" />
+          </span>
+          Qconcursos.com
+        </a>
+      </p>
+    </footer>
 
+    <!-- Script scroll barra de navegação -->
+    <script src="js/nav.js"></script>
+    <!-- Script requisições e rendereizações-->
     <script src="js/script.js"></script>
   </body>
 </html>

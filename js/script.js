@@ -36,11 +36,9 @@ function listenBurguer() {
 
 function listenButtons() {
   btnRepositorio.addEventListener('click', () => {
-    console.log('Click Repositório');
     renderTable(dataRepo, boxRepositorio);
   });
   btnFavorito.addEventListener('click', () => {
-    console.log('Click Favorito');
     renderTable(dataFavo, boxRepositorio);
   });
 }
