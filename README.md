@@ -1,5 +1,5 @@
 # Qconcursos - Processo seletivo - Desafio
-Este repositório diz respeito ao que foi desenvolvido para o processo seletivo do qconcursos.
+Este repositório diz respeito ao que foi realizado para o processo seletivo do qconcursos.
 
 > Prototipação
 
